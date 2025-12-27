@@ -10,6 +10,6 @@ double debit(account_t *account, double amount);
 
 double credit(account_t *account, double amount);
 
-double getBalance(account_t *account);
+double getBalance(const account_t *account);
 
 #endif // ACCOUNT_H

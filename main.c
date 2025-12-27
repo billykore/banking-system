@@ -1,17 +1,12 @@
-#include <stdio.h>
+#include <stdbool.h>
 
-#include "menu.h"
+#include "src/menu.h"
 
-int main() {
-    printf("Welcome to the Banking System\n");
-
-    while (1) {
+int main()
+{
+    bool isRunning = true;
+    do {
         displayMenu();
-
-        char input = getInput();
-
-        processInput(input);
-    }
-
-    return 0;
+        isRunning = processInput(getInput());
+    } while (isRunning);
 }

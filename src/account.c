@@ -1,6 +1,7 @@
 #include "account.h"
 
-double debit(account_t *account, double amount) {
+double debit(account_t *account, const double amount)
+{
     if (amount > account->balance) {
         return -1;
     }
@@ -8,11 +9,10 @@ double debit(account_t *account, double amount) {
     return account->balance;
 }
 
-double credit(account_t *account, double amount) {
+double credit(account_t *account, const double amount)
+{
     account->balance += amount;
     return account->balance;
 }
 
-double getBalance(account_t *account) {
-    return account->balance;
-}
+double getBalance(const account_t *account) { return account->balance; }

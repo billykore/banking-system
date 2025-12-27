@@ -3,6 +3,6 @@
 
 #include "account.h"
 
-account_t *getAccount(char *accountNumber);
+account_t *getAccount(const char *accountNumber);
 
 #endif // DATABASE_H
